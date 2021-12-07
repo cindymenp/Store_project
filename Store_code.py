@@ -10,9 +10,12 @@ from folium import Choropleth, Circle, Marker
 from folium.plugins import MarkerCluster
 import csv
 
+# Access to Postgres
 con = psycopg2.connect(database="store_database", user="cindy", password="Flamingosis01.", host="localhost",
                        port="5432")
 cur = con.cursor()
+
+#Importing tables from Postgres
 
 pd.DataFrame(psql.read_sql("SELECT * FROM stores", con))  # Displaying raw data from dable 'stores'
 
@@ -20,11 +23,15 @@ pd.DataFrame(psql.read_sql("SELECT * FROM items", con))  # Displaying framed tab
 
 pd.DataFrame(psql.read_sql("SELECT * FROM categories", con))  # Displaying framed table 'categories'
 
+#Joinng 'categories' and 'store_items' tables
+
 psql.read_sql("""
   SELECT categories.id, categories.name, store_items.item_id, store_items.store_id
   FROM categories AS categories
   LEFT JOIN store_items AS store_items ON categories.parent_id = store_items.store_id
 ;""", con)
+
+#Joinng 'opening times' and 'opening times exceptions' tables
 
 pd.DataFrame(psql.read_sql("""
 SELECT
@@ -42,6 +49,8 @@ FROM opening_times
 JOIN opening_time_exceptions ON opening_times.store_id = opening_time_exceptions.store_id 
 """, con))
 
+ # Displaying joined framed tables 'items' and 'stores'
+
 pd.DataFrame(psql.read_sql("""
 SELECT 
     stores.name , 
@@ -49,8 +58,9 @@ SELECT
 FROM items 
 JOIN stores ON stores.id = stores.id 
 INNER JOIN store_items ON store_items.item_id = items.id;
-""", con))  # Displaying joined framed tables 'items' and 'stores'
+""", con)) 
 
+# Displaying pictures
 # read images
 img_A = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod.jpeg")
 img_B = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (1).jpeg")
@@ -90,6 +100,8 @@ image_cols = ['imageUrls', 'otherImageUrls']
 format_dict = {}
 for image_col in image_cols:
     format_dict[image_col] = path_to_image_html
+    
+#Joining 'stores' and 'categories' tables
 
 pd.DataFrame(psql.read_sql("""
 SELECT stores.name , 
@@ -98,6 +110,8 @@ FROM categories
 INNER JOIN stores ON stores.id = stores.id 
 INNER JOIN store_categories ON store_categories.categories_id = categories.id;"""
                            , con))
+
+# Displaying joined framed tables 'stores' and 'categories' through a map
 
 pd.DataFrame(psql.read_sql("""
 
@@ -111,7 +125,6 @@ INNER JOIN join_store_locations ON join_store_locations.store_id  = latitude_lon
 INNER JOIN stores_locations ON join_store_locations.store_id  = stores_locations.id """
                            , con))
 
-# Displaying joined framed tables 'stores' and 'categories'
 
 m_1 = folium.Map(location=[52.370216, 4.895168], tiles='openstreetmap', zoom_start=10)
 
@@ -135,7 +148,8 @@ for index, row in stores_data.iterrows():
     print(m_1)
 
 
-# find categories in stores
+# find categories in stores trough a map
+
 find_categories = pd.read_csv(
     '/Users/cindymendoncapaez/opt/anaconda3/lib/python3.8/site-packages/folium/find_categories.csv')
 
@@ -178,7 +192,8 @@ GROUP BY join_item_stores.id,
 
 df.to_csv('join_item_stores.csv', index=False, header=False)
 
-# find item in stores
+# find item in stores through a map
+
 find_items = pd.read_csv(
     '/Users/cindymendoncapaez/opt/anaconda3/lib/python3.8/site-packages/folium/join_item_stores.csv')
 
