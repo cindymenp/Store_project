@@ -11,8 +11,7 @@ from folium.plugins import MarkerCluster
 import csv
 
 # Access to Postgres
-con = psycopg2.connect(database="store_database", user="cindy", password="Flamingosis01.", host="localhost",
-                       port="5432")
+con = psycopg2.connect(database="store_database", user="cindy", password="Flamingosis01.", host="localhost", port="5432")
 cur = con.cursor()
 
 #Importing tables from Postgres
