@@ -214,4 +214,3 @@ for index, row in find_items.iterrows():
     folium.Marker([lat, lon], popup=map_displayed_info2).add_to(m_3)
     print (m_3)
 
-print("Database opened successfully")
