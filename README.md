@@ -1,6 +1,6 @@
 #### Store_project ####
 
-## psycopg2
+# psycopg2
 
 psycopg2 has as a main purpose to be a PostgreSQL database adapter for Python.
 
@@ -9,7 +9,7 @@ con = psycopg2.connect(database="store_database", user="cindy", password="Flamin
 cur = con.cursor()
 
 
-##  mpimg
+# mpimg
 
 # mpimg is a Python library that has as a main purpose to show pictures in Python/Jupyter Lab
 
@@ -28,7 +28,7 @@ img_H = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (8).jpeg")
 
 
 
-## folium
+# folium
 
 # folium is a Python library that has as a main purpose to show maps in Python/Jupyter Lab
 
