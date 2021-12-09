@@ -8,7 +8,6 @@ from matplotlib import rcParams
 import folium
 from folium import Choropleth, Circle, Marker
 from folium.plugins import MarkerCluster
-import csv
 
 # Access to Postgres
 con = psycopg2.connect(database="store_database", user="cindy", password="Flamingosis01.", host="localhost", port="5432")
