@@ -11,12 +11,12 @@ cur = con.cursor()
 
 # mpimg
 
-# mpimg is a Python library that has as a main purpose to show pictures in Python/Jupyter Lab
+mpimg is a Python library that has as a main purpose to show pictures in Python/Jupyter Lab
 
 # Usage
 
-# Displaying pictures
-# read images
+Displaying pictures
+
 img_A = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod.jpeg")
 img_B = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (1).jpeg")
 img_C = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (2).jpeg")
@@ -30,7 +30,7 @@ img_H = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (8).jpeg")
 
 # folium
 
-# folium is a Python library that has as a main purpose to show maps in Python/Jupyter Lab
+folium is a Python library that has as a main purpose to show maps in Python/Jupyter Lab
 
 # Usage
 
