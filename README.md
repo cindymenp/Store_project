@@ -1,5 +1,7 @@
 # Store_project 
 
+The store project is a database done with Postgresql, Python and Jupyter Lab that has as a main purpose to search specific items in the stockroom of one or many stores by name, category and city.
+
 ## psycopg2
 
 psycopg2 has as a main purpose to be a PostgreSQL database adapter for Python.
