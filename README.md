@@ -79,7 +79,7 @@ Requests is a HTTP library for Python/Jupyter Lab
 page = requests.get(url)
 
 
-## bs4 
+# bs4 
 
 Beautiful Soup is a library that makes it easy to scrape information from web pages. 
 It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
