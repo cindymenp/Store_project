@@ -70,7 +70,7 @@ for index, row in find_items.iterrows():
 
 # Data mining store website 
 
-#requests
+# requests
 
 Requests is a HTTP library for Python/Jupyter Lab
 
