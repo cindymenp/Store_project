@@ -72,6 +72,8 @@ for index, row in find_items.iterrows():
 
 # Data mining store website 
 
+The Data mining store website project was done with the purpose of mining the opening and closing hours of all the H&M stores in the Netherlands, including holidays and exceptions in the schedule.
+
 ## requests
 
 Requests is a HTTP library for Python/Jupyter Lab
