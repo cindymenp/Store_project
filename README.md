@@ -1,19 +1,19 @@
-#### Store_project ####
+# Store_project 
 
-# psycopg2
+## psycopg2
 
 psycopg2 has as a main purpose to be a PostgreSQL database adapter for Python.
 
-# Usage
+## Usage
 con = psycopg2.connect(database="store_database", user="cindy", password="Flamingosis01.", host="localhost", port="5432")
 cur = con.cursor()
 
 
-# mpimg
+## mpimg
 
 mpimg is a Python library that has as a main purpose to show pictures in Python/Jupyter Lab
 
-# Usage
+## Usage
 
 Displaying pictures
 
@@ -28,11 +28,11 @@ img_H = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (8).jpeg")
 
 
 
-# folium
+## folium
 
 folium is a Python library that has as a main purpose to show maps in Python/Jupyter Lab
 
-# Usage
+## Usage
 
 m_1 = folium.Map(location=[52.370216, 4.895168], tiles='openstreetmap', zoom_start=10)
 
@@ -68,13 +68,13 @@ for index, row in find_items.iterrows():
     print (m_3)
 
 
-#### Data mining store website ####
+# Data mining store website 
 
-##requests
+#requests
 
 Requests is a HTTP library for Python/Jupyter Lab
 
-# Usage
+## Usage
 
 page = requests.get(url)
 
@@ -84,7 +84,7 @@ page = requests.get(url)
 Beautiful Soup is a library that makes it easy to scrape information from web pages. 
 It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
 
-# Usage
+## Usage
 
 soup = BeautifulSoup(page.content, 'html.parser')
 
