@@ -45,6 +45,8 @@ soup.find(attrs={'class': 'title is-4 is-size-5-touch'}).text.replace('\n'," ")
 
 store_information =  pd.DataFrame(storeTable, columns = ['name', 'address'])
 
+store_information_table =  pd.DataFrame(storeTable)
+
 df.to_csv("H&M.csv")  
 
 "Start code"
@@ -56,3 +58,4 @@ print(storeTable)
 print(text_mining)
 print(store_mining)
 print(store_information)
+print(store_information_table)
