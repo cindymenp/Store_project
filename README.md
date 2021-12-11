@@ -103,22 +103,22 @@ Use for all libraries the package manager [pip](https://pip.pypa.io/en/stable/) 
 ### mpimg
 
 Python 2: pip install mpimg
-Python 3 : pip3 install mping
+//Python 3 : pip3 install mping
 
 ### folium
 
 Python 2: pip install folium 
-Python 3: pip3 install folium
+//Python 3: pip3 install folium
 
 ### request
 
 Python 2: pip install request
-Python 3 pip3 install request
+//Python 3 pip3 install request
 
 ### bs4 
 
 Python 2: pip install bs4
-Python 3: pip3 install bs4
+//Python 3: pip3 install bs4
 
 
 # Contributing 
