@@ -98,6 +98,28 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 Use for all libraries the package manager [pip](https://pip.pypa.io/en/stable/) to install .
 
+## Instructions
+
+### mpimg
+
+Python 2: pip install mpimg
+Python 3 : pip3 install mping
+
+### folium
+
+Python 2: pip install folium 
+Python 3: pip3 install folium
+
+### request
+
+Python 2: pip install request
+Python 3 pip3 install request
+
+### bs4 
+
+Python 2: pip install bs4
+Python 3: pip3 install bs4
+
 
 # Contributing 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
