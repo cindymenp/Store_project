@@ -102,24 +102,51 @@ Use for all libraries the package manager [pip](https://pip.pypa.io/en/stable/) 
 
 ### mpimg
 
+Terminal:
+
 Python 2: pip install mpimg
 //Python 3 : pip3 install mping
 
+Jupyter Lab:
+
+Python 2: %pip install mpimg
+//Python 3 : %pip3 install mping
+
 ### folium
+
+Termianl:
 
 Python 2: pip install folium 
 //Python 3: pip3 install folium
 
+Jupyter Lab:
+
+Python 2: %pip install folium 
+//Python 3: %pip3 install folium
+
 ### request
+
+Terminal:
 
 Python 2: pip install request
 //Python 3 pip3 install request
 
+Jupyter Lab:
+
+Python 2: %pip install request
+//Python 3 %pip3 install request
+
 ### bs4 
+
+Terminal:
 
 Python 2: pip install bs4
 //Python 3: pip3 install bs4
 
+Jupyter Lab
+
+Python 2: %pip install bs4
+//Python 3: %pip3 install bs4
 
 # Contributing 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
