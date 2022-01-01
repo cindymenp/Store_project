@@ -7,15 +7,19 @@ The store project is a database done with Postgresql, Python and Jupyter Lab tha
 psycopg2 has as a main purpose to be a PostgreSQL database adapter for Python.
 
 #### Usage ####
+
+```` 
 con = psycopg2.connect(database="store_database", user="cindy", password="Flamingosis01.", host="localhost", port="5432")
 cur = con.cursor()
-
+```` 
 
 ## mpimg
 
 mpimg is a Python library that has as a main purpose to show pictures in Python/Jupyter Lab
 
 #### Usage ####
+
+```` 
 
 Displaying pictures
 
@@ -28,7 +32,7 @@ img_F = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (6).jpeg")
 img_G = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (7).jpeg")
 img_H = mpimg.imread("/Users/cindymendoncapaez/Documents/hmgoepprod (8).jpeg")
 
-
+```` 
 
 ## folium
 
@@ -36,6 +40,7 @@ folium is a Python library that has as a main purpose to show maps in Python/Jup
 
 #### Usage ####
 
+```` 
 m_1 = folium.Map(location=[52.370216, 4.895168], tiles='openstreetmap', zoom_start=10)
 
 for index, row in stores_data.iterrows():
@@ -68,7 +73,7 @@ for index, row in find_items.iterrows():
     map_displayed_info2 = '{} : {}'.format(name, items)
     folium.Marker([lat, lon], popup=map_displayed_info2).add_to(m_3)
     print (m_3)
-
+```` 
 
 # Data mining store website 
 
@@ -80,8 +85,9 @@ Requests is a HTTP library for Python/Jupyter Lab
 
 #### Usage ####
 
+```` 
 page = requests.get(url)
-
+```` 
 
 ## bs4 
 
@@ -89,10 +95,9 @@ Beautiful Soup is a library that makes it easy to scrape information from web pa
 It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
 
 #### Usage ####
-
+```` 
 soup = BeautifulSoup(page.content, 'html.parser')
-
-
+```` 
 
 # Installation of all libraries 
 
